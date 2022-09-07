@@ -14,9 +14,9 @@ class VideosModel extends Database
     }
 
     protected function getLatestVideo() {
-        $sql = "SELECT * FROM videos";
+        $sql = "SELECT * FROM videos ORDER BY id DESC LIMIT 3";
         $stmt = $this->connect()->query($sql);
-        $result = $stmt->fetch();
+        $result = $stmt->fetchAll();
         return $result;
     }
 

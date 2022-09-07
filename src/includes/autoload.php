@@ -1,6 +1,6 @@
 <?php
 
 spl_autoload_register(function($className) {
-    $path = './src/';
-    include $path . $className . '.php';
+    $className = str_replace('\\', '/', $className);
+    require './src/' . $className . '.php';
 });

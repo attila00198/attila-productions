@@ -19,8 +19,7 @@ class VideosView extends VideosModel
 
     public function showLatestVideo()
     {
-        $videos = $this->getAllVideos();
-        $videos = array_slice($videos, -3, 3, true);
+        $videos = $this->getLatestVideo();
         foreach ($videos as $video) {
             echo '<div class="video-item card col-sm-12 col-md-auto pt-2">
                     <img class="img img-thumbnail" src="http://img.youtube.com/vi/' . $video["video_id"] . '/0.jpg" alt="Video THumbnail">
