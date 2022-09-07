@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+#video-list {
+    gap: 10px;
+}
+
+.video-item {
+    width: 250px;
+    background-color: transparent;
+}
+
+.card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.video-item:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
