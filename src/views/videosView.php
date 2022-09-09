@@ -1,9 +1,5 @@
 <?php
 
-namespace Views;
-
-use Models\VideosModel;
-
 class VideosView extends VideosModel
 {
     public function shwoVideos()

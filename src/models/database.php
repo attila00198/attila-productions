@@ -1,9 +1,5 @@
 <?php
 
-namespace Models;
-
-use PDO, PDOException;
-
 class Database
 {
     private $host = "localhost";

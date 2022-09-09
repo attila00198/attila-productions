@@ -1,7 +1,4 @@
 <?php
-namespace Models;
-
-use Models\Database;
 
 class VideosModel extends Database
 {

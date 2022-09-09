@@ -1,6 +1,13 @@
 <?php
 
-spl_autoload_register(function($className) {
-    $className = str_replace('\\', '/', $className);
-    require './src/' . $className . '.php';
+spl_autoload_register(function ($className) {
+    $folders = ['controllers', 'models', 'views', 'router'];
+    $file = lcfirst($className) . '.php';
+
+    foreach ($folders as $folder) {
+        $fullPath = 'src/' . DIRECTORY_SEPARATOR . $folder . DIRECTORY_SEPARATOR . $file;
+        if (file_exists($fullPath)) {
+            include $fullPath;
+        }
+    }
 });

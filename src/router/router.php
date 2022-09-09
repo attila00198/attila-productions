@@ -1,10 +1,5 @@
 <?php
 
-namespace Router;
-
-use Controllers\VideosController;
-use Views\VideosView;
-
 class Router
 {
     public function get($uri)

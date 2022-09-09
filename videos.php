@@ -1,7 +1,6 @@
 <?php
-include_once 'src/includes/autoload.php';
-include_once './src/router/router.php';
-use Router\Router;
+require 'src/includes/autoload.php';
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -42,7 +41,7 @@ use Router\Router;
     <main class="container-fluid row">
         <div id="video-list" class=" row col-sm-12 col-md-9">
             <?php
-            $r = new Router;
+            $r = new Router();
             $uri = $_SERVER["REQUEST_URI"];
             $r->get($uri);
             ?>
