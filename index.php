@@ -29,7 +29,7 @@ include 'src/includes/autoload.php';
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/" aria-current="page">Kezdőlap</a>
+                    <a class="nav-link" href="/" aria-current="page">Kezdőlap</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/videos.php">Videok</a>
@@ -40,6 +40,7 @@ include 'src/includes/autoload.php';
 
     <main class="container-fluid row">
         <div id="video-list" class=" row col-sm-12 col-md-9">
+            <h1>A lefgrissebb videók</h1>
             <?php
             $r = new Router();
             $uri = $_SERVER["REQUEST_URI"];
@@ -71,7 +72,7 @@ include 'src/includes/autoload.php';
     <script src="./public/js/bootstrap.min.js"></script>
 
     <script src="./public/js/script.js"></script>
-    <script src="./public/js/addVideo.js"></script>
+    <!-- <script src="./public/js/addVideo.js"></script> -->
 </body>
 
 </html>
