@@ -1,11 +1,11 @@
 <?php
-
+include 'src/config/config.php';
 class Database
 {
-    private $host = "localhost";
-    private $user = "root";
-    private $pass = "";
-    private $dbname = "attila_productions";
+    private $host = DB_HOST;
+    private $user = DB_USER;
+    private $pass = DB_PASS;
+    private $dbname = DB_NAME;
 
     protected function connect() {
         $dsn = "mysql:host=".$this->host.";dbname=".$this->dbname;

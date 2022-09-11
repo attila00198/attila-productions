@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function ($className) {
-    $folders = ['controllers', 'models', 'views', 'router'];
+    $folders = ['controllers', 'models', 'views', 'router', 'config'];
     $file = lcfirst($className) . '.php';
 
     foreach ($folders as $folder) {
