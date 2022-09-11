@@ -32,21 +32,19 @@ include 'src/includes/autoload.php';
                     <a class="nav-link" href="/" aria-current="page">Kezdőlap</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/videos.php">Videok</a>
+                    <a class="nav-link" href="/videos">Videok</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <main class="container-fluid row">
-        <div id="video-list" class=" row col-sm-12 col-md-9">
-            <h1>A lefgrissebb videók</h1>
-            <?php
-            $r = new Router();
-            $uri = $_SERVER["REQUEST_URI"];
-            $r->get($uri);
-            ?>
-        </div>
+        <?php
+        $r = new Router();
+        $uri = $_SERVER["REQUEST_URI"];
+        $r->get($uri);
+        ?>
+
         <div class="sidebar d-none d-md-block col-md-3">
             <div class="msg"></div>
             <form id="add-video-form" class="form-control" action="src/index.php" method="POST">

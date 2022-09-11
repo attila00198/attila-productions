@@ -8,6 +8,10 @@ nav {
     margin-bottom: 20px;
 }
 
+.container-fluid {
+    align-items: flex-start;
+}
+
 #video-list {
     gap: 10px;
 }

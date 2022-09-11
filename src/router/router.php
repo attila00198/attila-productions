@@ -10,7 +10,7 @@ class Router
                 $content = new VideosView();
                 $content->showLatestVideo();
                 break;
-            case '/videos.php':
+            case '/videos':
                 $content = new VideosView();
                 $content->shwoVideos();
                 break;
