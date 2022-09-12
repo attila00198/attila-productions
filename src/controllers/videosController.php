@@ -2,5 +2,5 @@
 
 class VideosController extends VideosModel
 {
-
+    
 }

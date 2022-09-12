@@ -17,6 +17,14 @@ class VideosModel extends Database
         return $result;
     }
 
+    public function getVideo($video)
+    {
+        $sql = "SELECT * FROM videos WHERE video_id = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$video]);
+        $result = $stmt->fetch();
+        return $result;
+    }
 
     protected function addVideo(string $videoTitle, string $videoId) {
         $sql = "INSERT INTO videos (video_title, video_id) VALUES (?, ?)";

@@ -2,7 +2,7 @@
 
 class Router
 {
-    public function get($uri)
+    public function get($uri, $params = "")
     {
 
         switch ($uri) {
@@ -13,6 +13,14 @@ class Router
             case '/videos':
                 $content = new VideosView();
                 $content->shwoVideos();
+                break;
+            case "/videos/?video={$params}":
+                $content = new VideosView();
+                $content->showSingleVideo($params);
+                break;
+            case '/login':
+                $content = new VideosView();
+                $content->showLoginPage();
                 break;
             default:
                 http_response_code(404);
@@ -26,9 +34,8 @@ class Router
     {
 
         switch ($uri) {
-            case '/videos.php':
-                $content = new VideosView();
-                $content->shwoVideos();
+            case '/videos':
+                echo "READY";
                 break;
             default:
                 http_response_code(404);
